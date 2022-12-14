@@ -1,8 +1,4 @@
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
+import org.junit.*;
 
 public class ArrayOperationsTests {
 
@@ -11,26 +7,22 @@ public class ArrayOperationsTests {
 
     @Test
     public void sumTest() {
-        assertEquals(21, ArrayOperations.sum(arr));
+        Assert.assertEquals(21, ArrayOperations.sum(arr));
     }
 
     @Test
     public void maxTest() {
-        assertEquals(6, ArrayOperations.max(arr));
+        Assert.assertEquals(6, ArrayOperations.max(arr));
     }
 
     @Test
     public void minTest() {
-        assertEquals(1, ArrayOperations.min(arr));
+        Assert.assertEquals(1, ArrayOperations.min(arr));
     }
 
     @Test
     public void averageNormalTest() {
-        assertEquals(3.5, ArrayOperations.average(arr), 0.01);
+        Assert.assertEquals(3.5, ArrayOperations.average(arr), 0.01);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void averageExceptionTest() {
-        ArrayOperations.average(new int[]{});
-    }
 }
